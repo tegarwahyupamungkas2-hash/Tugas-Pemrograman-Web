@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <p class="label">TUGAS PEMROGRAMAN WEB</p>
+            <h1>Penilaian Nilai Mahasiswa</h1>
+            <p class="description">
+                Masukkan nilai lima mata kuliah untuk mengetahui
+                total, rata-rata, dan kategori nilai.
+            </p>
+        </header>
+
+        <form id="nilaiForm" class="form-card">
+            <div class="field">
+                <label for="pemrograman">Pemrograman Web</label>
+                <input type="number" id="pemrograman"
+                    min="0" max="100" step="any"
+                    placeholder="0–100" required>
+            </div>
+
+            <div class="field">
+                <label for="algoritma">Algoritma dan Pemrograman</label>
+                <input type="number" id="algoritma"
+                    min="0" max="100" step="any"
+                    placeholder="0–100" required>
+            </div>
+
+            <div class="field">
+                <label for="basisData">Basis Data</label>
+                <input type="number" id="basisData"
+                    min="0" max="100" step="any"
+                    placeholder="0–100" required>
+            </div>
+
+            <div class="field">
+                <label for="jaringan">Jaringan Komputer</label>
+                <input type="number" id="jaringan"
+                    min="0" max="100" step="any"
+                    placeholder="0–100" required>
+            </div>
+
+            <div class="field">
+                <label for="matematika">Matematika</label>
+                <input type="number" id="matematika"
+                    min="0" max="100" step="any"
+                    placeholder="0–100" required>
+            </div>
+
+            <div class="button-row">
+                <button type="submit" class="button-primary">
+                    Hitung Nilai
+                </button>
+
+                <button type="reset" class="button-secondary">
+                    Reset
+                </button>
+            </div>
+        </form>
+
+        <section id="hasil" class="result-card"
+            aria-live="polite" hidden>
+
+            <h2>Hasil Perhitungan</h2>
+
+            <div class="result-grid">
+                <div class="result-item">
+                    <span class="result-label">Total Nilai</span>
+                    <strong id="totalNilai">-</strong>
+                </div>
+
+                <div class="result-item">
+                    <span class="result-label">Rata-rata</span>
+                    <strong id="rataRata">-</strong>
+                </div>
+
+                <div class="result-item">
+                    <span class="result-label">Kategori</span>
+                    <strong id="kategori">-</strong>
+                </div>
+            </div>
+
+            <p class="status" id="statusKelulusan"></p>
+
+            <p class="note">
+                Batas kelulusan adalah rata-rata 60.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
